@@ -1,0 +1,14 @@
+#EXTM3U
+#EXT-X-VERSION:3
+#EXT-X-ALLOW-CACHE:YES
+#EXT-X-TARGETDURATION:10
+#EXT-X-MEDIA-SEQUENCE:0
+#EXTINF:10.000000,
+http://localhost:5000/get/media/segment00.ts
+#EXTINF:10.000000,
+http://localhost:5000/get/media/segment01.ts
+#EXTINF:10.000000,
+http://localhost:5000/get/media/segment02.ts
+#EXTINF:3.540000,
+http://localhost:5000/get/media/segment03.ts
+#EXT-X-ENDLIST
