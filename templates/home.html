@@ -9,7 +9,7 @@
 <div class="row">
     <div class="column">
         <div class="column_element">
-            <form>
+            <form action="/" method="post">
                 <input name="url" placeholder="your url" required>
                 <button type="submit">Play</button>
             </form>
@@ -45,7 +45,7 @@
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 <script>
     var video = document.getElementById('video');
-    var videoSrc = "http://localhost:5000/get/playlists/{% if chosen %}{{chosen }}{% else %}{{playlists.0}}{% endif %}";
+    var videoSrc = "{% if not url %}http://localhost:5000/get/playlists/{% if chosen %}{{chosen }}{% else %}{{playlists.0}}{% endif %}{% else %}{{url}}{% endif %}";
     if (Hls.isSupported()) {
         var hls = new Hls();
         hls.loadSource(videoSrc);
