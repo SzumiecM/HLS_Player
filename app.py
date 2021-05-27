@@ -6,7 +6,7 @@ app.config['SECRET_KEY'] = 'paprask asfaksfbasbfh 15h21951 25hasf bfasjfa'
 
 @app.route("/")
 def hello_world():
-    return render_template('player.html')
+    return render_template('home.html', )
 
 
 @app.route('/get/<path>/<file>')
