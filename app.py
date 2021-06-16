@@ -1,4 +1,4 @@
-from flask import Flask, render_template, send_from_directory, request, make_response
+from flask import Flask, render_template, send_from_directory, request
 from os import walk
 from flask_cors import CORS
 
