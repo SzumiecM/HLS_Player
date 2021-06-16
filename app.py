@@ -1,14 +1,9 @@
 from flask import Flask, render_template, send_from_directory, request, make_response
 from os import walk
-from flask_cors import cross_origin, CORS
+from flask_cors import CORS
 
 app = Flask(__name__)
-# app.config['SECRET_KEY'] = 'paprask asfaksfbasbfh 15h21951 25hasf bfasjfa'
-# CORS(app, resources={r"/*": {"origins": "*"}})
 CORS(app)
-
-
-# app.config['CORS_HEADERS'] = 'Content-Type'
 
 
 @app.route('/', methods=['POST', 'GET'])

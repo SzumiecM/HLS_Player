@@ -46,7 +46,6 @@
 <script>
     var video = document.getElementById('video');
     var videoSrc = "{% if not url %}http://localhost:5000/get/playlists/{% if chosen %}{{chosen }}{% else %}{{playlists.0}}{% endif %}{% else %}{{url}}{% endif %}";
-    // var videoSrc = "http://localhost:5000/redirect/?url={{url}}";
     if (Hls.isSupported()) {
         var hls = new Hls();
         hls.loadSource(videoSrc);
