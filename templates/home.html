@@ -51,18 +51,7 @@
         hls.loadSource(videoSrc);
         hls.attachMedia(video);
         video.controls = true;
-        setInterval(update, 1000)
     }
-
-    function update() {
-        document.getElementById('bitrate').innerText = hls.level;
-        document.getElementById('height').innerText = 'Height: ' + video.clientHeight.toString();
-        document.getElementById('width').innerText = 'Width: ' + video.clientWidth.toString();
-        document.getElementById('video_codec').innerText = hls.INFO;
-        document.getElementById('audio_codec').innerText = hls.TextCodec;
-    }
-
-
 </script>
 
 </html>
