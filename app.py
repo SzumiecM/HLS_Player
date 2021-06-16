@@ -13,7 +13,7 @@ CORS(app)
 
 @app.route('/', methods=['POST', 'GET'])
 def home():
-    _, _, playlists = next(walk('playlists'))
+    playlists = [playlist for _, _, playlist in walk('playlists')][0]
     url = None
 
     if request.method == 'POST':
